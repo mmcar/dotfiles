@@ -1,0 +1,27 @@
+#!/bin/bash
+# creates a template script in $PATH based on https://google.github.io/styleguide/shell.xml
+
+SCRIPT_FOLDER="$HOME/bin/scripts"
+SCRIPT_FILE="$SCRIPT_FOLDER/$1"
+EDITOR="$HOME/bin/nvim.appimage"
+
+
+main() {
+  if [[ -f $SCRIPT_FILE ]]; then
+   $EDITOR $SCRIPT_FILE
+  else
+    echo '#!/bin/bash
+
+main() {
+    
+}
+
+main "$@"' > $SCRIPT_FILE
+    chmod +x $SCRIPT_FILE
+    $EDITOR "+call cursor(4,2)" $SCRIPT_FILE
+  fi
+
+}
+
+#call main, pass forward all args
+main "$@"

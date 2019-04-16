@@ -1,0 +1,11 @@
+#!/bin/bash
+# depends upon having the following alias
+# alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME
+main() {
+    git init --bare $HOME/.dotfiles.git
+    echo 'alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME"' >> $HOME/.zshrc
+    source ~/.zshrc
+    dotfiles config --local status.showUntrackedFiles no
+}
+
+main "$@"
