@@ -1,4 +1,6 @@
 #!/bin/bash
+# Source:
+# https://harfangk.github.io/2016/09/18/manage-dotfiles-with-a-git-bare-repository.html
 # depends upon having the following alias
 # alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME
 main() {

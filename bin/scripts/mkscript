@@ -11,14 +11,12 @@ main() {
    $EDITOR $SCRIPT_FILE
   else
     echo '#!/bin/bash
-
 main() {
-    
-}
 
+}
 main "$@"' > $SCRIPT_FILE
     chmod +x $SCRIPT_FILE
-    $EDITOR "+call cursor(4,2)" $SCRIPT_FILE
+    $EDITOR "+call cursor(3,2)" $SCRIPT_FILE
   fi
 
 }
