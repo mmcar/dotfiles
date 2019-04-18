@@ -14,7 +14,7 @@ floating_modifier $mod
 # start a terminal. give it a new app-id to avoid conflicts with un-nested xserver terminals
 # bindsym $mod+Return exec gnome-terminal --app-id i3.terminal
 # Changed 14-3-2019
-bindsym $mod+Return exec alacritty --live-config-reload
+bindsym $mod+Return exec alacritty --live-config-reload -e fish
 
 # start firefox with i3 profile to avoid xserver conflicts
 # run firefox -P first to start the 'new profile' wizard to create the i3 profile
