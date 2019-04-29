@@ -1,3 +1,3 @@
 function cfv
-        vim ~/.vimrc $argv;
+        vim ~/.config/nvim/init.vim $argv;
 end
