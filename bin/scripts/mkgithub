@@ -1,5 +1,6 @@
 #!/bin/bash
-
+# Uses curl to create a new private repo at github
+# TODO: flags for public, further automation
 USER_NAME="mmcar"
 
 main() {
