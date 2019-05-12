@@ -1,6 +1,7 @@
 set PATH $HOME/.rbenv/bin $PATH
 set PATH $HOME/.rbenv/shims $PATH
 set PATH $HOME/bin/scripts $PATH
+set PATH $HOME/bin/ $PATH
 rbenv rehash >/dev/null ^&1
 
 # bootstrap fisher
@@ -11,3 +12,13 @@ if not functions -q fisher
 end
 
 # TODO: automatically install fisher packages if they aren't installed
+
+# emacs ansi-term support
+if test -n "$EMACS"
+  set -x TERM eterm-color
+end
+
+# this function may be required
+function fish_title
+  true
+end

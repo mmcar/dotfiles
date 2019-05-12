@@ -24,7 +24,8 @@ bindsym $mod+w exec firefox -p i3
 
 # start emacs
 # bindsym $mod+Shift+Return exec emacs
-bindsym $mod+Shift+Return exec emacs --with-profile spacemacs
+# bindsym $mod+Shift+Return exec emacs --with-profile spacemacs
+bindsym $mod+Shift+Return exec emacsclient -c
 bindsym $mod+Control+Return exec emacs --with-profile default
 # kill focused window
 bindsym $mod+Shift+q kill

@@ -1,5 +1,11 @@
 #!/bin/bash
 # creates a template script in $PATH based on https://google.github.io/styleguide/shell.xml
+# This script is also created with mkscript :^)
+# TODO: make work with flags
+#       add flag for putting the script in pwd instead of $SCRIPT_FOLDER
+#       add other scaffolding options:
+#           --bare (default)
+#           --flags -f (adds skeleton for gnu-style flags / variables)
 
 SCRIPT_FOLDER="$HOME/bin/scripts"
 SCRIPT_FILE="$SCRIPT_FOLDER/$1"
@@ -21,5 +27,4 @@ main "$@"' > $SCRIPT_FILE
 
 }
 
-#call main, pass forward all args
 main "$@"

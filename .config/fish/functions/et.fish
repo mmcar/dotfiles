@@ -1,3 +1,3 @@
 function et
-        emacs -nw $argv;
+        emacsclient -n $argv;
 end
