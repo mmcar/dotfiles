@@ -53,7 +53,7 @@ This function should only modify configuration layer settings."
      ruby
      (shell :variables
             shell-default-height 30
-            shell-default-term-shell "/usr/bin/fish"
+            shell-default-shell 'eshell
             shell-default-position 'bottom)
      ;; spell-checking
      ;; syntax-checking
